@@ -1,11 +1,24 @@
-describe('Add todos', function() {
-    it('works', function() {
-        var todos = new Todos();
-        todos.add({
-            description: 'My first todo'
-        });
-        require('chai').expect(todos.get(0)).to.equal({
-            description: 'My first todo'
-        });
-    });
+var chai = require('chai');
+
+describe('Add todos', function () {
+  function Todos() {
+    var todo;
+    return {
+      add: function (theTodo) {
+        todo = theTodo;
+      },
+      get: function () {
+        return todo;
+      }
+    };
+  }
+
+  it('adds a todo', function () {
+    var todos = new Todos();
+    var todo = {
+      description: 'My first todo'
+    };
+    todos.add(todo);
+    chai.expect(todos.get(0)).to.deep.equal(todo);
+  });
 });
