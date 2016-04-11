@@ -4,8 +4,8 @@ describe('Add todos', function () {
   function Todo() {
     return {
       checked: false,
-      check: function() {
-        this.checked = true;
+      toggle: function() {
+        this.checked = !this.checked;
       }
     };
   }
@@ -48,8 +48,12 @@ describe('Add todos', function () {
   it('checks a todo', function () {
     var todo = new Todo();
     chai.expect(todo.checked).to.be.false;
-    todo.check();
+    todo.toggle();
     chai.expect(todo.checked).to.be.true;
+    todo.toggle();
+    chai.expect(todo.checked).to.be.false;
   });
+
+
 
 });
