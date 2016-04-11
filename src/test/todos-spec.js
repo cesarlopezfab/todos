@@ -1,6 +1,15 @@
 var chai = require('chai');
 
 describe('Add todos', function () {
+  function Todo() {
+    return {
+      checked: false,
+      check: function() {
+        this.checked = true;
+      }
+    };
+  }
+
   function Todos() {
     var todos = [];
     return {
@@ -35,4 +44,12 @@ describe('Add todos', function () {
     chai.expect(todos.get(0)).to.deep.equal(todo1);
     chai.expect(todos.get(1)).to.deep.equal(todo2);
   });
+
+  it('checks a todo', function () {
+    var todo = new Todo();
+    chai.expect(todo.checked).to.be.false;
+    todo.check();
+    chai.expect(todo.checked).to.be.true;
+  });
+
 });
