@@ -4,16 +4,20 @@
   "description": "Todos implementation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cesarlopezfab/todos.git"
   },
   "author": "cesarlopezfab",
-  "license": "GPL",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/cesarlopezfab/todos/issues"
   },
-  "homepage": "https://github.com/cesarlopezfab/todos"
+  "homepage": "https://github.com/cesarlopezfab/todos",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }
