@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   const chai = require('chai');
@@ -24,9 +24,9 @@
     };
   }
 
-  describe('Todos', function() {
+  describe('Todos', function () {
 
-    it('adds one todo to todos', function() {
+    it('adds one todo to todos', function () {
       const todos = new Todos();
       const todo = {
         description: 'My first todo'
@@ -35,7 +35,7 @@
       chai.expect(todos.get(0)).to.deep.equal(todo);
     });
 
-    it('adds two todos to todos', function() {
+    it('adds two todos to todos', function () {
       const todos = new Todos();
       const todo1 = {
         description: 'My first todo'
@@ -51,8 +51,8 @@
 
   });
 
-  describe('Todo', function() {
-    it('toggles', function() {
+  describe('Todo', function () {
+    it('toggles', function () {
       const todo = new Todo();
       chai.expect(todo.checked).to.be.false;
       todo.toggle();
