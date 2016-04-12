@@ -5,3 +5,15 @@
 
 # todos
 Todos implementation
+
+
+To Do:
+
+- [ ] Add stimate (optional)
+- [ ] Handle several ToDo lists
+- [ ] Persist somehow
+- [ ] Add user interface
+
+Technical
+
+- [ ] Coverage report
